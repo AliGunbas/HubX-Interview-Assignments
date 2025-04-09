@@ -7,8 +7,6 @@ import { SliderPage } from "../types";
 export const Slider = (props: { sliderPages: SliderPage[] }) => {
 
     const { sliderPages } = props
-
-
     const [selectedPageId, setSelectedPageId] = useState<number>(1)
     const [selectedButton, setSelectedButton] = useState<number>(0)
 
@@ -16,7 +14,7 @@ export const Slider = (props: { sliderPages: SliderPage[] }) => {
         const container = document.querySelector(`#img-container-${selectedPageId}`) as HTMLElement;
         const detailContainer = document.querySelector(`#detail-container-${selectedPageId}`) as HTMLElement;
 
-        if (!container) return;
+        if (!container || !detailContainer) return;
         container.style.opacity = "1"
         detailContainer.style.opacity = "1"
 
@@ -27,6 +25,16 @@ export const Slider = (props: { sliderPages: SliderPage[] }) => {
             { yPercent: 100, opacity: 0 },
             { yPercent: 0, opacity: 1, duration: 1.2, ease: "power2.out" }
         );
+
+        gsap.fromTo(detailContainer,
+            {
+                opacity: 0,
+            },
+            {
+                opacity: 1,
+                duration: .5,
+                ease: "power2.out",
+            });
 
         const isThereParticleImages = images.length > 1
         if (isThereParticleImages) {
@@ -74,8 +82,8 @@ export const Slider = (props: { sliderPages: SliderPage[] }) => {
                     }
                 );
             } else if (selectedPageId == 5) {
-                const rotateArr = [-39.61, -21.51, 0, 25.96]
 
+                const rotateArr = [-39.61, -21.51, 0, 25.96]
 
                 images.forEach((img, index) => {
                     if (index === 0) return;
