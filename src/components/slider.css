@@ -1,0 +1,157 @@
+/* Slider sayfalarının kendi resim ve resimlerin uydu resimleri için gereken css */
+#img-container-1 img:nth-child(1) {
+    max-height: 482px;
+    height: 100%;
+}
+
+#img-container-2 img:nth-child(1) {
+    max-height: 482px;
+    height: 100%;
+}
+
+#img-container-2 img:nth-child(2) {
+    position: absolute;
+    top: 51.66%;
+    left: 12px;
+    transform: translateX(-50%);
+    max-height: 148px;
+    height: 100%;
+}
+
+#img-container-2 img:nth-child(3) {
+    position: absolute;
+    top: 29%;
+    right: 22px;
+    transform: translateX(50%);
+    max-height: 182px;
+    height: 100%;
+}
+
+#img-container-3 img:nth-child(1) {
+    max-height: 482px;
+    height: 100%;
+}
+
+#img-container-3 img:nth-child(2) {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-height: 348px;
+    height: 73%;
+    z-index: 3;
+}
+
+#img-container-3 img:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-height: 348px;
+    height: 73%;
+    z-index: 2;
+}
+
+#img-container-3 img:nth-child(4) {
+    position: absolute;
+    bottom: 1.6%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-height: 348px;
+    height: 73%;
+    z-index: 1;
+}
+
+#img-container-4 img:nth-child(1) {
+    max-height: 482px;
+    height: 100%;
+}
+
+#img-container-4 img:nth-child(2) {
+    position: absolute;
+    bottom: 0;
+    left: -11%;
+    /* transform: translateX(-100%); */
+    max-height: 348px;
+    height: 73%;
+    z-index: 3;
+}
+
+#img-container-4 img:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    right: -11%;
+    /* transform: translateX(100%); */
+    max-height: 348px;
+    height: 73%;
+    z-index: 2;
+}
+
+#img-container-5 img:nth-child(1) {
+    max-height: 482px;
+    height: 100%;
+}
+
+#img-container-5 img:nth-child(2) {
+    position: absolute;
+    bottom: 8%;
+    left: -6%;
+    transform: translate(-50%, 100%);
+    max-height: 23px;
+    height: 5%;
+    z-index: 3;
+}
+
+#img-container-5 img:nth-child(3) {
+    position: absolute;
+    bottom: 5%;
+    left: 14%;
+    transform: translate(-50%, 100%);
+    max-height: 140px;
+    height: 29%;
+    z-index: 2;
+}
+
+#img-container-5 img:nth-child(4) {
+    position: absolute;
+    bottom: 13.3%;
+    left: 48%;
+    transform: translate(-50%, 100%);
+    max-height: 140px;
+    height: 30%;
+    z-index: 2;
+}
+
+#img-container-5 img:nth-child(5) {
+    position: absolute;
+    bottom: 5%;
+    right: -18%;
+    transform: translate(-50%, 100%);
+    max-height: 140px;
+    height: 30%;
+    z-index: 2;
+}
+
+@media screen and (max-width: 1020px) {
+   
+    #img-container-2 img:nth-child(2) {
+        max-height: calc(148px * 400/482);
+        left: 10px;
+    }
+    #img-container-2 img:nth-child(3) {
+        max-height: calc(182px * 400/482);
+        right: 18px;
+    }
+}
+
+@media screen and (max-width: 515px) {
+    
+    #img-container-2 img:nth-child(2) {
+        max-height: calc(148px * 315/482);
+        left: 8px;
+    }
+    #img-container-2 img:nth-child(3) {
+        max-height: calc(182px * 315/482);
+        right: 14px;
+    }
+}
